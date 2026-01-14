@@ -8,11 +8,6 @@ FIFO="$ELEVATE_DIR/elevate.fifo"
 sudo mkdir -p "$ELEVATE_DIR"
 sudo chmod 700 "$ELEVATE_DIR"
 
-if [[ ! -p "$FIFO" ]]; then
-    sudo mkfifo "$FIFO"
-    sudo chmod 600 "$FIFO"
-fi
-
 if [[ -f /tmp/machine-info ]]; then
     DEVICE_NAME=$(grep '^customization_id=' /tmp/machine-info 2>/dev/null | cut -d= -f2 | tr -d '"')
 else
