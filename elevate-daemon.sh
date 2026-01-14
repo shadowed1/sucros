@@ -2,7 +2,7 @@
 # Sucros Daemon
 # shadowed1
 
-FIFO="/home/chronos/.elevate.fifo"
+FIFO="/home/chronos/.sucros.fifo"
 
 rm -f "$FIFO" 2>/dev/null
 mkfifo "$FIFO"
