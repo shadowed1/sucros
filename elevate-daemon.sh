@@ -3,8 +3,6 @@
 # shadowed1
 
 FIFO="/usr/local/elevate/elevate.fifo"
-[[ -p "$FIFO" ]] || mkfifo "$FIFO"
-chmod 600 "$FIFO"
 
 echo "[elevate-daemon] Listening on $FIFO"
 
