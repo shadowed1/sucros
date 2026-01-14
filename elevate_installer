@@ -1,9 +1,6 @@
 # Must be run as sudo logged in as chronos in VT-2
-mkdir -p /usr/local/
-curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate.sh -o /usr/local/elevate
-curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate-daemon.sh -o /usr/local/elevate-daemon
-curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate.fifo -o /usr/local/.elevate.fifo
+mkdir -p /usr/local/bin
+curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate.sh -o /usr/local/bin/elevate
+curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate-daemon.sh -o /usr/local/bin/elevate-daemon
 chmod +x /usr/local/elevate
 chmod +x /usr/local/elevate-daemon
-chmod +x /usr/local/.elevate.fifo
-chown 755 /usr/local/.elevate.fifo
