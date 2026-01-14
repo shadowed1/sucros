@@ -6,6 +6,7 @@
 mkdir -p /usr/local/bin
 curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate.sh -o /usr/local/bin/elevate
 curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate-daemon.sh -o /usr/local/bin/elevate-daemon
+curl -L https://raw.githubusercontent.com/shadowed1/elevate/main/elevate.conf -o /etc/init/elevate.conf
 chmod +x /usr/local/bin/elevate
 chmod +x /usr/local/bin/elevate-daemon
 rm -f /usr/local/elevate_installer
