@@ -1,5 +1,5 @@
 #!/bin/bash
-# ChromeOS Elevated Shell
+# Sucros Wrapper
 # shadowed1
 
 FIFO="/home/chronos/.elevate.fifo"
