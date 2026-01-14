@@ -1,20 +1,25 @@
 #!/bin/bash
-# ChromeOS Elevate Daemon
+# ChromeOS Elevate Daemon (FIFO, secure, correct)
 # shadowed1
 
-CMD_FILE="/usr/local/.elevate.cmds"
+FIFO="/home/chronos/.elevate.fifo"
 
-sudo touch "$CMD_FILE"
-sudo chown 1000:1000 "$CMD_FILE"
-sudo chmod 600 "$CMD_FILE"
+rm -f "$FIFO" 2>/dev/null
+mkfifo "$FIFO"
+chown 1000:1000 "$FIFO"
+chmod 600 "$FIFO"
 
-echo ""
-echo "[elevate-daemon] Listening on $CMD_FILE"
-echo ""
+echo
+echo "[elevate-daemon] Listening on $FIFO"
+echo
 
-tail -F "$CMD_FILE" | while read -r cmd; do
-    cmd="$(echo "$cmd" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
-    [[ -z "$cmd" ]] && continue
-    echo "[elevate-daemon] Running: $cmd"
-    bash -c "$cmd"
+while true; do
+    if IFS= read -r cmd <"$FIFO"; then
+        cmd="${cmd#"${cmd%%[![:space:]]*}"}"
+        cmd="${cmd%"${cmd##*[![:space:]]}"}"
+        [[ -z "$cmd" ]] && continue
+
+        echo "[elevate-daemon] Running: $cmd" >/dev/tty
+        /bin/bash -c "$cmd"
+    fi
 done
