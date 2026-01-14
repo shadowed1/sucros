@@ -2,7 +2,7 @@
 # ChromeOS Elevate Daemon
 # shadowed1
 
-FIFO="/usr/local/elevate/elevate.fifo"
+FIFO="/usr/local/.elevate.fifo"
 
 sudo rm -f "$FIFO"
 sudo mkfifo "$FIFO"
