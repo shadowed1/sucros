@@ -81,7 +81,7 @@ echo "                                 ▀████▄  ██ ██ ▄█�
 echo "                                   ▀████ ██ ██ ██    ██ ▀▀ ██ ██ ▀███▄ ██▄█▀ "
 echo "                                ███████▀ ▀██▀█ ▀████ ██    ▀███▀ ▄▄▄█▀ ▀█▄▄▄ "
 echo "                                             "
-rainbow_echo "                                            Enabling sudo in crosh!"   
+rainbow_echo "                                           Enabling sudo in crosh!"   
 rainbow_echo ""
 curl -L https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose_installer.sh -o /home/chronos/user/sucrose_installer
 echo
