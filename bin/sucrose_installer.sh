@@ -58,8 +58,8 @@ echo "${RESET}"
 read -r -p "${BLUE}${BOLD}Start sucros-daemon now? [y/N] ${RESET}" ans
 
 if [[ "$ans" =~ ^[Yy]$ ]]; then
-        echo "${BLUE}Running: sudo sucrose-daemon 2>/dev/null & ${RESET}"
-        sudo sucrose-daemon 2>/dev/null &
+        echo "${BLUE}Running: sudo sucrose-daemon${RESET}"
+        sudo sucrose-daemon
 else
         echo "${BLUE}Run: sudo sucrose-daemon in VT-2 logged in as chronos when ready ${RESET}"
 fi
