@@ -23,15 +23,27 @@
 
 - Leave VT-2 (ctrl-alt-back) and sudo should now be enabled in crosh shell!
 
+<br>
+
+### *Starting the daemon in VT-2, testing sudo, and then closing the daemon in VT-2 (ctrl-c):*
+<p align="center">
+  <img src="https://i.imgur.com/kVYghkI.png" alt="logo" width="750" />
+</p>
+
+
 ### How does this work? 
 
 - Uses `mkfifo` for bidirectional communication between crosh shell and VT-2 when prepending `sucrose` or `sudo` to command. 
 - The daemon uses `read` to passively wait for use of its fifo before it replies back.
 - Fully atomic and ephemeral without any buffer.
 - Enter VT-2, log in as chronos, and run `sudo sucrose_uninstaller` to uninstall.
-- Dynamically creates/removes sudo alias if sudo is disabled. 
+- Dynamically creates/removes sudo alias if sudo is disabled.
 
 <br>
 
 To enable sudo in crosh natively, check out sudoCrosh:
 https://github.com/shadowed1/sudoCrosh
+
+### Why make this tool if we can enable sudo natively with the above tool?
+
+- This tool does not require rootfs verification disabled and makes fewer changes to our chromebooks out of the box.
