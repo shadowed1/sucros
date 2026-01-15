@@ -16,13 +16,8 @@ CMD_FIFO="/home/chronos/.sucrose.fifo"
 if [[ ! -p "$CMD_FIFO" ]]; then
     echo 'sudo: The "no new privileges" flag is set, which prevents sudo from running as root.'
     echo "sudo: If sudo is running in a container, you may need to adjust the container configuration to disable the flag."
-    echo
-    echo "${RED}sucrose-daemon not running. ${RESET}"
-    echo "${YELLOW}Open VT-2 (ctrl-alt-refresh), log in as chronos, and run: "
-    echo
-    echo "${BOLD}sudo sucrose-daemon ${RESET}"
-    echo
-    echo "${MAGENTA}ctrl-alt-back to return${RESET}"
+    echo "${RED}"
+    echo "sucrose-daemon is not running - ${BOLD}sudo is disabled${RESET}"
     echo
     exit 1
 fi
