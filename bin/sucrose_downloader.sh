@@ -11,6 +11,17 @@ CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
+COLORS=(
+    "$RED"
+    "$GREEN"
+    "$YELLOW"
+    "$BLUE"
+    "$MAGENTA"
+    "$CYAN"
+)
+
+LOGO_COLOR="${COLORS[RANDOM % ${#COLORS[@]}]}"
+
 rainbow_indices=()
 for ((g=0; g<=5; g++)); do rainbow_indices+=( $((16 + 36*5 + 6*g + 0)) ); done
 for ((r=5; r>=0; r--)); do rainbow_indices+=( $((16 + 36*r + 6*5 + 0)) ); done
@@ -74,15 +85,15 @@ rainbow_echo "                               ..   ':.         .;;.             .
 rainbow_echo "                                   l0Oc         .od,            .l00o. "                           
 rainbow_echo "                                   ,ol'         cO0o.            .:c' "                            
 rainbow_echo "                                                :kkl. "                             
-echo "${RESET}${YELLOW}                                             "
+echo "${RESET}${LOGO_COLOR}                                             "
 echo "                                 ▄▄▄▄▄▄▄                                     "
 echo "                                █████▀▀▀                                     "
 echo "                                 ▀████▄  ██ ██ ▄████ ████▄ ▄███▄ ▄█▀▀▀ ▄█▀█▄ "
 echo "                                   ▀████ ██ ██ ██    ██ ▀▀ ██ ██ ▀███▄ ██▄█▀ "
 echo "                                ███████▀ ▀██▀█ ▀████ ██    ▀███▀ ▄▄▄█▀ ▀█▄▄▄ "
 echo "                                             "
-rainbow_echo "                                           Enabling sudo in crosh!"   
-rainbow_echo ""
+echo "                                           Enabling sudo in crosh! ${RESET}"   
+echo ""
 curl -L https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose_installer.sh -o /home/chronos/user/sucrose_installer
 echo
 echo "${CYAN}${BOLD}How to install: ${RESET}${BLUE}"
