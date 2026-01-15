@@ -15,9 +15,18 @@ sudo chmod +x "$BIN_DIR/sucrose"
 sudo chmod +x "$BIN_DIR/sucrose-daemon"
 sudo chmod +x "$BIN_DIR/sucrose_uninstaller"
 
-BASHRC="$HOME/.bashrc"
+CHROMEOS_BASHRC="/home/chronos/user/.bashrc"
+DEFAULT_BASHRC="$HOME/.bashrc"
+TARGET_FILE=""
+        
+if [ -f "$CHROMEOS_BASHRC" ]; then
+    TARGET_FILE="$CHROMEOS_BASHRC"
+elif [ -f "$DEFAULT_BASHRC" ]; then
+    TARGET_FILE="$DEFAULT_BASHRC"
+fi
+        
 
-sed -i '/^# <<< SUCROSE SUDO MARKER <<</,/^# <<< END SUCROSE SUDO MARKER <<</d' "$BASHRC"
+sed -i '/^# <<< SUCROSE SUDO MARKER <<</,/^# <<< END SUCROSE SUDO MARKER <<</d' "$TARGET_FILE"
 
 {
     echo "# <<< SUCROSE SUDO MARKER <<<"
