@@ -30,8 +30,5 @@ sed -i '/^# <<< SUCROSE SUDO MARKER <<</,/^# <<< END SUCROSE SUDO MARKER <<</d' 
     echo "# <<< END SUCROSE SUDO MARKER <<<"
 } >> "$BASHRC"
 
-echo "[+] Sucrose sudo alias logic added to $BASHRC"
-
-
 echo "[sucrose] Installation complete"
 echo "[sucrose] Run: sudo sucrose-daemon in VT-2 logged in as chronos"
