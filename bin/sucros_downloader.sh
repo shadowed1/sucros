@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sucros Downloader
+# Sucrose Downloader
 # shadowed1
 echo
 echo ""
@@ -40,13 +40,13 @@ echo "                                   l0Oc         .od,            .l00o. "
 echo "                                   ,ol'         cO0o.            .:c' "                            
 echo "                                                :kkl. "                             
 echo
-echo "                                                Sucros"
+echo "                                                Sucrose"
 echo
-curl -L https://raw.githubusercontent.com/shadowed1/sucros/main/bin/sucros_installer.sh -o /home/chronos/user/sucros_installer
+curl -L https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose_installer.sh -o /home/chronos/user/sucrose_installer
 echo
 echo "ctrl-alt-refresh to open VT-2 (ctrl-alt-back to exit) - log in as chronos"
 echo "Run the command listed below in VT-2 to continue the installer:"
 echo
-echo "sudo bash ~/sucros_installer"
+echo "sudo bash ~/sucrose_installer"
 echo
 echo "Can safely ignore noexec mount warning."
