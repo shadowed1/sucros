@@ -74,8 +74,14 @@ rainbow_echo "                               ..   ':.         .;;.             .
 rainbow_echo "                                   l0Oc         .od,            .l00o. "                           
 rainbow_echo "                                   ,ol'         cO0o.            .:c' "                            
 rainbow_echo "                                                :kkl. "                             
-
-rainbow_echo "                                           Enabling sudo in crosh!"   
+echo "${RESET}${BOLD}${MAGENTA}                                             "
+echo "                                 ▄▄▄▄▄▄▄                                     "
+echo "                                █████▀▀▀                                     "
+echo "                                 ▀████▄  ██ ██ ▄████ ████▄ ▄███▄ ▄█▀▀▀ ▄█▀█▄ "
+echo "                                   ▀████ ██ ██ ██    ██ ▀▀ ██ ██ ▀███▄ ██▄█▀ "
+echo "                                ███████▀ ▀██▀█ ▀████ ██    ▀███▀ ▄▄▄█▀ ▀█▄▄▄ "
+echo "                                             "
+rainbow_echo "                                            Enabling sudo in crosh!"   
 rainbow_echo ""
 curl -L https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose_installer.sh -o /home/chronos/user/sucrose_installer
 echo
