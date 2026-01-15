@@ -1,19 +1,19 @@
 #!/bin/bash
-# sucros installer
+# sucrose Installer
 # shadowed1
 
 set -e
-echo "[sucros] Installing..."
+echo "[sucrose] Installing..."
 BIN_DIR="/usr/local/bin"
 INIT_DIR="/etc/init"
 mkdir -p "$BIN_DIR"
 
-curl -fsSL https://raw.githubusercontent.com/shadowed1/sucros/main/bin/sucros.sh -o "$BIN_DIR/sucros"
-curl -fsSL https://raw.githubusercontent.com/shadowed1/sucros/main/bin/sucros-daemon.sh -o "$BIN_DIR/sucros-daemon"
-#curl -fsSL https://raw.githubusercontent.com/shadowed1/sucros/main/bin/sucros.conf -o "$INIT_DIR/sucros.conf"
+curl -fsSL https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose.sh -o "$BIN_DIR/sucrose"
+curl -fsSL https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose-daemon.sh -o "$BIN_DIR/sucrose-daemon"
+#curl -fsSL https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose.conf -o "$INIT_DIR/sucrose.conf"
 
-sudo chmod +x "$BIN_DIR/sucros"
-sudo chmod +x "$BIN_DIR/sucros-daemon"
+sudo chmod +x "$BIN_DIR/sucrose"
+sudo chmod +x "$BIN_DIR/sucrose-daemon"
 
-echo "[sucros] Installation complete"
-echo "[sucros] Run: sudo sucros-daemon in VT-2 logged in as chronos"
+echo "[sucrose] Installation complete"
+echo "[sucrose] Run: sudo sucrose-daemon in VT-2 logged in as chronos"
