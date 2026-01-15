@@ -5,7 +5,7 @@
 ### A ChromeOS daemon to enable sudo in crosh shell.
 <br>
 
-### How to install:
+## How to install:
 
 
 - Requires developer mode. 
@@ -16,7 +16,7 @@
 
 <br>
 
-### How to use:
+## How to use:
 
 - After installing, open VT-2 (ctrl-alt-refresh), log in as chronos, and run:
 `sudo sucrose-daemon` and let it run. 
