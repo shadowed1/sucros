@@ -38,8 +38,9 @@
 - The daemon uses `read` to wait for use of its fifo before it replies back to the sucrose wrapper.
 - Sucrose wrapper checks for daemon's fifo to detect if it is running or not.
 - Daemon can only recieve data if `sudo` or `sucrose` command is prepended to user's argument.
-- Fully atomic and ephemeral without any buffer; stdout goes directly to TTY.
-- Dynamically creates/removes sudo alias by checking if no new privileges flag is set. 
+- Fully atomic and ephemeral without any buffer.
+- Can even interact with prompts from VT-2; stdout goes directly to TTY!
+- Dynamically creates/removes sudo alias by checking if no new privileges flag is set.
 
 <br>
 
