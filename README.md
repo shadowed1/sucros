@@ -36,8 +36,12 @@
 - Uses `mkfifo` for bidirectional communication between crosh shell and VT-2 when prepending `sucrose` or `sudo` to command. 
 - The daemon uses `read` to passively wait for use of its fifo before it replies back.
 - Fully atomic and ephemeral without any buffer.
-- Enter VT-2, log in as chronos, and run `sudo sucrose_uninstaller` to uninstall.
 - Dynamically creates/removes sudo alias if sudo is disabled.
+
+<br>
+
+### How to remove:
+- Enter VT-2, log in as chronos, and run `sudo sucrose_uninstaller` to uninstall.
 
 <br>
 
