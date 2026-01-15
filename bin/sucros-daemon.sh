@@ -1,14 +1,14 @@
 #!/bin/bash
-# sucrose Daemon
+# Sucrose Daemon
 # shadowed1
 
-CMD_FIFO="/home/chronos/.sucros.fifo"
-LOCK_FILE="/home/chronos/.sucros.lock"
+CMD_FIFO="/home/chronos/.sucrose.fifo"
+LOCK_FILE="/home/chronos/.sucrose.lock"
 
 exec 200>"$LOCK_FILE" || exit 1
 flock -n 200 || {
     echo
-    echo "[sucros-daemon] Already running"
+    echo "[sucrose-daemon] Already running"
     echo
     exit 1
 }
@@ -19,7 +19,7 @@ chown 1000:1000 "$CMD_FIFO"
 chmod 600 "$CMD_FIFO"
 
 echo
-echo "[sucros-daemon] Listening on $CMD_FIFO"
+echo "[sucrose-daemon] Listening on $CMD_FIFO"
 echo
 
 while true; do
@@ -32,7 +32,7 @@ while true; do
         [[ -z "$cmd" ]] && continue
         [[ ! -p "$reply_fifo" ]] && continue
 
-        echo "[sucros-daemon] Running: $cmd" >/dev/tty
+        echo "[sucrose-daemon] Running: $cmd" >/dev/tty
 
         {
             /bin/bash -c "$cmd"
