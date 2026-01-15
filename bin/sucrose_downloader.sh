@@ -44,6 +44,8 @@ echo "                                                Sucrose"
 echo
 curl -L https://raw.githubusercontent.com/shadowed1/sucrose/main/bin/sucrose_installer.sh -o /home/chronos/user/sucrose_installer
 echo
+echo "How to install:"
+echo
 echo "ctrl-alt-refresh to open VT-2 (ctrl-alt-back to exit) - log in as chronos"
 echo "Run the command listed below in VT-2 to continue the installer:"
 echo
