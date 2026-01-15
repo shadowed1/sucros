@@ -36,9 +36,7 @@ if [[ "$ans" =~ ^[Yy]$ ]]; then
                 echo "${RED}No .bashrc found! ${RESET}"
             fi
             
-        echo "${CYAN}[+] Uninstalled${RESET}"
+        echo "${YELLOW}[+] Uninstalled${RESET}"
 else
         echo "${RED}[*] Cancelled ${RESET}"
 fi
-
-exit 0
