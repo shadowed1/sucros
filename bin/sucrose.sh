@@ -23,6 +23,7 @@ if [[ ! -p "$CMD_FIFO" ]]; then
     echo "${BOLD}sudo sucrose-daemon ${RESET}"
     echo
     echo "${MAGENTA}ctrl-alt-back to return${RESET}"
+    echo
     exit 1
 fi
 
@@ -39,6 +40,7 @@ if [[ $# -eq 0 ]]; then
     echo "            [-u user] file ... "
     echo "${GREEN}"
     echo "sucrose-daemon is running - ${BOLD}sudo is enabled${RESET}"
+    echo
     exit 1
 fi
 
