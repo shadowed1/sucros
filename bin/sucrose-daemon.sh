@@ -39,7 +39,7 @@ chmod 600 "$CMD_FIFO"
 
 cleanup() {
     rm -f "$CMD_FIFO" 2>/dev/null
-    sudo rm -f ""$AUTH_FILE" 2>/dev/null
+    sudo rm -f "$AUTH_FILE" 2>/dev/null
     echo "${RED}sucrose-daemon stopped${RESET}"
 }
 
